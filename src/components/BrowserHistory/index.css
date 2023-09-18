@@ -7,17 +7,19 @@
 .time {
   color: black;
   font-size: 15px;
+  margin-left: 20px;
+  margin-right: 50px;
 }
 .title {
   font-size: 15px;
-  margin-right: 10px;
+  margin-left: 10px;
   font-family: 'Roboto';
 }
 .website-name {
   font-size: 15px;
   font-family: 'Roboto';
   font-weight: 500;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .website-con {
   display: flex;
@@ -28,7 +30,7 @@
 }
 .logo {
   height: 20px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .delete-icon {
   height: 20px;

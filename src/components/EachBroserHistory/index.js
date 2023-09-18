@@ -28,10 +28,10 @@ class EachBroserHistory extends Component {
     const filteredItemsList = intialUsersList.filter(eachItem =>
       eachItem.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
-    const res = filteredItemsList.every(each => each === true)
-    let a = true
-    if (res || filteredItemsList.length === 0) {
-      a = false
+
+    let a = false
+    if (filteredItemsList.length === 0) {
+      a = true
     }
     return (
       <div className="browser-history-con">
@@ -53,23 +53,20 @@ class EachBroserHistory extends Component {
               className="input-ele"
               placeholder="Search history"
               onChange={this.onchangeInput}
-              value="search"
+              value={searchInput}
             />
           </div>
         </div>
         <div className="broser-items-container">
           <ul>
-            {a ? (
-              filteredItemsList.map(eachItem => (
-                <BrowserHistory
-                  eachBrowser={eachItem}
-                  key={eachItem.id}
-                  deleteItem={this.deleteItem}
-                />
-              ))
-            ) : (
-              <p className="no-content">There is no history to show </p>
-            )}
+            {filteredItemsList.map(eachItem => (
+              <BrowserHistory
+                eachBrowser={eachItem}
+                key={eachItem.id}
+                deleteItem={this.deleteItem}
+              />
+            ))}
+            {a && <p className="no-content">There is no history to show </p>}
           </ul>
         </div>
       </div>

@@ -10,9 +10,8 @@ const BrowserHistory = props => {
   return (
     <li>
       <div className="browser-history-item-container">
-        <h1 className="time">{timeAccessed}</h1>
-
         <div className="website-con">
+          <h1 className="time">{timeAccessed}</h1>
           <img src={logoUrl} className="logo" alt="domain logo" />
           <h1 className="title">{title}</h1>
           <p className="website-name">{domainUrl}</p>
